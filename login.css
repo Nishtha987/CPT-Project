@@ -1,0 +1,81 @@
+/* Reset some default styles for browsers */
+* {
+    margin: 0;
+    padding: 100;
+    box-sizing: border-box;
+}
+
+/* Set a background color for the entire page */
+body {
+    background-color: #f0f0f0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Style the login container */
+.login-container {
+    width: 300px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Style the heading */
+h1 {
+    color: #482356ba;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+/* Style the labels and input fields */
+label {
+    display: block;
+    margin-bottom: 5px;
+    text-align: left;
+    font-weight: bold;
+}
+
+input[type="email"],
+input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+}
+
+/* Style the login button */
+button {
+    background-color: #1d1559;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #171145dd;
+}
+
+/* Style the "Don't have an account?" link */
+p {
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+a {
+    color: #1f0d3d9c;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}

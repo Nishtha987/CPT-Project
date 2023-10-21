@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css">
+    <script src="https://kit.fontawesome.com/f30fac2c61.js" crossorigin="anonymous"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Catamaran:wght@200&family=Courgette&family=Edu+TAS+Beginner:wght@700&family=Lato:wght@300;900&family=Mukta:wght@700&family=Mulish:wght@300&family=Open+Sans&family=PT+Sans:ital,wght@1,700&family=Poppins:wght@300&family=Raleway:wght@100&family=Roboto&family=Roboto+Condensed:wght@700&family=Roboto+Slab&display=swap"
+        rel="stylesheet">
+        <style>
+            /* Update the font style for the headings */
+            h1.heads, h2 {
+                font-family: 'Abril Fatface', cursive;
+                /* Add any other CSS styles as needed */
+            }
+            h1 {
+                font-family: 'Catamaran', sans-serif;
+                /* Add any other CSS styles as needed */
+            }
+    
+            /* Additional CSS for enhanced visual appeal */
+            .container {
+                width: 80%;
+                margin: 0 auto;
+            }
+    
+            .mainPage {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 40px 0;
+            }
+    
+            .text {
+                flex: 1;
+                text-align: center;
+            }
+    
+            .text h1 {
+                font-size: 3rem;
+            }
+    
+            .text h2 {
+                font-size: 2rem;
+                color: #ff219bd2; /* Custom color */
+            }
+    
+            .text p {
+                font-size: 1.2rem;
+                margin: 20px 0;
+            }
+    
+            .text button {
+                background-color: #2a5f55; /* Custom color */
+                color: white;
+                border: none;
+                padding: 10px 20px;
+                font-size: 1rem;
+                cursor: pointer;
+            }
+    
+            .text button:hover {
+                background-color: #fd4c87dc; /* Custom hover color */
+            }
+    
+            .mainPage img {
+                flex: 1;
+                max-width: 50%;
+                height: auto;
+            }
+    
+            /* Add styles for the blog content and footer as needed */
+            .blogContent {
+                margin: 30px 0;
+            }
+    
+            .blogContent .head {
+                text-align: center;
+            }
+    
+            .blogContent h1 {
+                font-size: 2.5rem;
+            }
+    
+            .blogContent .trd {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+    
+            .trending {
+                flex: 1;
+                border: 1px solid #ccc;
+                padding: 20px;
+                text-align: center;
+            }
+    
+            .trending img {
+                max-width: 100%;
+                height: auto;
+            }
+    
+            .trending h3 {
+                font-size: 1.5rem;
+                margin: -20px 0;
+            }
+    
+            .trending p {
+                font-size: 1rem;
+            }
+    
+            .trending a {
+                text-decoration: none;
+                color: #ffffff; /* Custom link color */
+            }
+    
+            .trending a:hover {
+                color: #ffffff; /* Custom hover color */
+            }
+    
+            /* Add this CSS to style the footer */
+
+.footer {
+    background-color: #151647d2; /* Background color for the entire footer */
+    color: #fff; /* Text color */
+    padding: 30px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.footer-column {
+    flex: 1;
+    margin: 10px;
+    padding: 20px;
+    text-align: center;
+}
+
+.footer h2, .footer h3 {
+    font-size: 1.5rem; /* Heading font size */
+    margin-bottom: 10px;
+}
+
+.footer p {
+    font-size: 1rem; /* Paragraph font size */
+    margin: 5px;
+}
+        </style>
+</head>
+
+
+<body>
+    <div class="container">
+        <nav>
+            <div class="logo">
+                <h1>makemeBLUSH</h1>
+            </div>
+            <ul>
+                <li>
+                    <a href= "login.html" id="Login" onclick="Login()">Login</a>
+                    <a id="home" onclick="home()">Home</a>
+                    <a href= "shop.html" id="shop" onclick="shop()">Shop</a>
+                    <a href="about.html" id="about" onclick=" about()">About</a>
+                    <a href="contact.html"id="contact" onclick="contact()">Contact</a>
+                    <i onclick="addItem()" class="fa-sharp fa-solid fa-cart-shopping"></i>
+                </li>
+            </ul>
+        </nav>
+        
+
+        <div class="mainPage">
+            <div class="text">
+                <h2>makemeBLUSH</h2>
+                <h1 class="heads">ALL YOUR HEARTS OUT</h1>
+                <h1>AND EYES HERE</h1>
+                <p>Match your vibe with us!!<br> makemeBLUSH - WHERE STYLE MEETS YOU </p>
+                <button onclick="location.href='about.html'">EXPLORE</button>
+            </div>
+            <img src="m3.png" alt="Image Description" width="500" height="700">
+        </div>
+        
+        <div class="blogContent">
+            <div class="head">
+                <h1>Blush Top <span>Blog's</span></h1>
+            </div>
+
+            <div class="trd">
+                <div class="trending">
+                    <img src="tr1.webp" alt="">
+                    <div class="txt">
+                        <h3>Trending Girl Cloths</h3><br>
+                        <p>When it comes to fashion, visuals are key<br> 21 fashion blogs to follow in 2023</p><br>
+                        <a href="https://influencermarketinghub.com/best-fashion-blogs/">Read More</a>
+                    </div>
+                </div>
+                <div class="trending">
+                    <img src="tr3.webp" alt="">
+                    <div class="txt">
+                        <h3>Trending Boys Cloths</h3> <br>
+                        <p>Update your wardrobe for winter month<br> 12 fashion essentials all men should own in 2023</p><br>
+                        <a href="https://www.apetogentleman.com/">Read More</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="footer">
+            <div class="footer-column">
+                <h2>makemeBLUSH</h2>
+                <p>Your destination for trendy fashion</p>
+            </div>
+            <div class="footer-column">
+                <h3>ABOUT US</h3>
+                <p>Address: NOVO CRYSTALS, near Ambedkar Park, Lucknow, Uttar Pradesh.</p>
+                <p>Providing the best in fashion since 2005</p>
+            </div>
+            <div class="footer-column">
+                <h3>Contact Us</h3>
+                <p>Phone: 876-627-7877</p>
+                <p>Email: info@makemeblush.com</p>
+            </div>
+            <div class="footer-column">
+                <h3>Trending</h3>
+                <p>Stay updated with the latest trends</p>
+                <p>Visit our stores for more</p>
+            </div>
+        </div>
+
+    </div>
+    <script src="index.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ecommerce Website</title>
+    <link rel="stylesheet" href="index.css">
+    <script src="https://kit.fontawesome.com/f30fac2c61.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Catamaran:wght@200&family=Courgette&family=Edu+TAS+Beginner:wght@700&family=Lato:wght@300;900&family=Mukta:wght@700&family=Mulish:wght@300&family=Open+Sans&family=PT+Sans:ital,wght@1,700&family=Piedra&family=Poppins:wght@300&family=Raleway:wght@100&family=Roboto&family=Roboto+Condensed:wght@700&family=Roboto+Slab&display=swap" rel="stylesheet">
+    <style>
+        /* Your CSS styles here */
+        .product {
+            cursor: pointer;
+        }
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(14, 11, 58, 0.596);
+            z-index: 10;
+            overflow: auto;
+        }
+        .modal-content {
+            background-color: #ffffff;
+            margin: 10% auto;
+            padding: 20px;
+            border: 3px solid #c4aaaa;
+            width: 80%;
+            display: flex;
+            align-items: center; /* Vertically center content */
+        }
+        .product-details {
+            flex: 1; /* Take up 50% of the width */
+            padding: 20px;
+        }
+        .product-image {
+            flex: 1; /* Take up 50% of the width */
+            max-width: 100%;
+        }
+        .modal-content button {
+            background-color: #123053; 
+            color: white; 
+            padding: 10px 20px; 
+            border: 1px solid #ffffff; 
+            cursor: pointer;
+            margin-top: 20px;
+        }
+        .product-container {
+            display: flex; /* Display the product cards in a horizontal line */
+            justify-content: space-between; /* Distribute space evenly between cards */
+            align-items: center; /* Vertically center content */
+            margin: 20px 0;
+        }
+        .crd {
+            flex: 0 0 calc(25% - 10px); /* Adjust the width and margin as needed */
+            text-align: center;
+            cursor: pointer;
+            border: 1px solid #ddd;
+            padding: 10px;
+        }
+        .txt {
+            padding: 10px 0;
+        }
+        .crd img {
+            max-width: 100%; /* Adjust the maximum image width */
+            height: auto; /* Maintain image aspect ratio */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <nav>
+            <div class="logo">
+                <h1>makemeBLUSH</h1>
+            </div>
+            <ul>
+                <li>
+                    <a href="login.html" id="Login" onclick="Login()">Login</a>
+                    <a href="index.html" id="home" onclick="home()">Home</a>
+                    <a id="shop" onclick="shop()">Shop</a>
+                    <a href= "about.html" id="about" onclick="about()">About</a>
+                    <a href="contact.html" id="contact" onclick="contact()">Contact</a>
+                    <a href="#" id="viewCartButton">View Cart</a>
+                    <i onclick="addItem()" class="fa-sharp fa-solid fa-cart-shopping"></i>
+                </li>
+            </ul>
+        </nav>
+        <!-- Product Cards -->
+        <div class="cardMen">
+            <div class="head">
+                <h1>BLUSH <span> Men's Wear</span></h1>
+            </div>
+            <div class="product-container">
+                <div class="crd" onclick="showProductDetails('Cotton Trending Shirt 1', 'Rs. 5,700', 'Soft cotton fabric with perfect fit, comfortable.', 'srt1.webp')">
+                    <img src="srt1.webp" alt="">
+                    <div class="txt">
+                        <h3>Cotton Trending Shirt 1</h3>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star-half-stroke"></i><br>
+                        <p>Rs. 5,700</p>
+                        <button onclick="addToCart('Cotton Trending Shirt 1', 'Rs. 5,700')">Add To Cart</button>
+                    </div>
+                </div>
+            
+                <div class="crd" onclick="showProductDetails('Cotton Trending Shirt 2', 'Rs. 6,200', 'Ideal for a classic and trendy look.', 'srt2.webp')">
+                    <img src="srt2.webp" alt="">
+                    <div class="txt">
+                        <h3>Cotton Trending Shirt 2</h3>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star-half-stroke"></i><br>
+                        <p>Rs. 6,200</p>
+                        <button onclick="addToCart('Cotton Trending Shirt 2', 'Rs. 6,200')">Add To Cart</button>
+                    </div>
+                </div>
+            
+                <div class="crd" onclick="showProductDetails('Cotton Trending Shirt 3', 'Rs. 7,500', 'AIdeal for a classic and trendy look.', 'srt6.webp')">
+                    <img src="srt6.webp" alt="">
+                    <div class="txt">
+                        <h3>Cotton Trending Shirt 3</h3>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star-half-stroke"></i><br>
+                        <p>Rs. 7,500</p>
+                        <button onclick="addToCart('Cotton Trending Shirt 3', 'Rs. 7,500')">Add To Cart</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="cardGirls">
+            <div class="head">
+                <h1>BLUSH <span> Women's Wear</span></h1>
+            </div>
+            <div class="product-container">
+                <div class="crd" onclick="showProductDetails('Trending Girl Top', 'Rs. 2,900', 'Soft cotton fabric with perfect fit, comfortable.', 'wn6.webp')">
+                    <img src="wn6.webp" alt="">
+                    <div class="txt">
+                        <h3>Trending Girl Topsotton</h3>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star-half-stroke"></i><br>
+                        <p>Rs. 2,900</p>
+                        <button onclick="addToCart('Trending Girl Top', 'Rs. 2,900')">Add To Cart</button>
+                    </div>
+                </div>
+                <div class="crd" onclick="showProductDetails('Girlie Tee', 'Rs. 3,500', 'Soft cotton fabric with perfect fit, comfortable.', 'wn4.webp')">
+                    <img src="wn4.webp" alt="">
+                    <div class="txt">
+                        <h3>Girlie Tee</h3>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star-half-stroke"></i><br>
+                        <p>Rs. 3,500</p>
+                        <button onclick="addToCart('Girlie Tee', 'Rs. 3,500')">Add To Cart</button>
+                    </div>
+                </div>
+                <div class="crd" onclick="showProductDetails('Trending cotton', 'Rs. 4,800', 'Soft cotton fabric with perfect fit, comfortable.', 'wn5.webp')">
+                    <img src="wn5.webp" alt="">
+                    <div class="txt">
+                        <h3>Trending cotton</h3>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star-half-stroke"></i><br>
+                        <p>Rs. 4,800</p>
+                        <button onclick="addToCart('Trending cotton', 'Rs. 4,800')">Add To Cart</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="product-modal" class="modal">
+            <div class="modal-content">
+                <div class="product-details">
+                    <h2>Product Details</h2>
+                    <h1 id="productName">Product Name</h1>
+                    <h2>Price</h2>
+                    <h2 id="productPrice">ProductPrice</h2>
+                    <p id="productDescription">Soft cotton fabric with perfect fit, comfortable.</p>
+                    <button onclick="closeProductDetails()">Close</button>
+                    <a href="cart.html" style="background-color: #123053; color: white; padding: 10px 20px; border: 1px solid #ffffff; cursor: pointer; margin-top: 10px; text-decoration: none; display: inline-block;">View Cart</a>
+                    <button id="addToCartButton">Add To Cart</button>
+                    
+
+                </div>
+                <div class="product-image">
+                    <img id="cartImg" class="product-image" src="" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        // Define variables to store the current product details
+        let currentProduct = { name: '', price: '' };
+
+        function showProductDetails(productName, productPrice, productDescription, cartImg) {
+            const modal = document.getElementById("product-modal");
+            const productNameElement = document.getElementById("productName");
+            const productPriceElement = document.getElementById("productPrice");
+            const productDescriptionElement = document.getElementById("productDescription");
+            const cartImgElement = document.getElementById("cartImg");
+
+            // Store the current product details
+            currentProduct.name = productName;
+            currentProduct.price = productPrice;
+
+            productNameElement.innerText = productName;
+            productPriceElement.innerText = productPrice;
+            productDescriptionElement.innerText = productDescription;
+            cartImgElement.src = cartImg;
+            modal.style.display = "block";
+
+            // Update the button text
+            const addToCartButton = document.getElementById("addToCartButton");
+            addToCartButton.innerText = "Add To Cart";
+            addToCartButton.onclick = function () {
+                addToCart(currentProduct.name, currentProduct.price);
+            };
+        }
+
+        function closeProductDetails() {
+            const modal = document.getElementById("product-modal");
+            modal.style.display = "none";
+        }
+
+        function addToCart(productName, productPrice) {
+            // Implement your logic to add the selected product to the cart here.
+            alert(productName + " added to cart for " + productPrice);
+        }
+    </script>    
+    <script src="index.js"></script>
+</body>
+</html>
+
+
+

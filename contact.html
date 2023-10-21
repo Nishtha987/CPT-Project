@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css">
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Catamaran:wght@200&family=Courgette&family=Edu+TAS+Beginner:wght@700&family=Lato:wght@300;900&family=Mukta:wght@700&family=Mulish:wght@300&family=Open+Sans&family=PT+Sans:ital,wght@1,700&family=Piedra&family=Poppins:wght@300&family=Raleway:wght@100&family=Roboto&family=Roboto+Condensed:wght@700&family=Roboto+Slab&display=swap" rel="stylesheet">
+    <style>
+        /* Your CSS styles go here */
+        
+        /* Style the Connect With Us button */
+        #contactToggle {
+            background-color: #2d1b40;
+            color: #fff;
+            padding: 10px 30px;
+            border: none;
+            cursor: pointer;
+            border-radius: 3px;
+            display: block;
+            margin: 20px auto;
+            font-size: 20px;
+        }
+
+        #contactToggle:hover {
+            background-color: #180a35b7;
+        }
+
+        #clothesImage {
+            width: 500px; /* Adjust the size of the image as needed */
+            display: block;
+            margin: 0 auto;
+        }
+
+        /* Style the "Let's Connect" section */
+        .contact {
+            display: none;
+            text-align: center;
+            background-color: #f3f3f3; /* Light gray background */
+            padding: 20px;
+            border-radius: 5px;
+        }
+
+        .contact h1 {
+            font-size: 36px;
+            color: #1a1a1a;
+            margin-bottom: 10px;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .contact p {
+            font-size: 18px;
+            color: #333;
+            margin-bottom: 20px;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        /* Style the form section */
+        .form {
+            text-align: center;
+        }
+
+        .form h1 {
+            font-size: 24px;
+            color: #2d1b40;
+        }
+
+        .form input {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .form button {
+            background-color: #2d1b40;
+            color: #fff;
+            padding: 10px 30px;
+            border: none;
+            cursor: pointer;
+            border-radius: 3px;
+            font-size: 20px;
+        }
+
+        .form button:hover {
+            background-color: #180a35b7;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Your HTML content -->
+    <img id="clothesImage" src="clothes.jpeg" alt="Clothes Image" />
+
+    <button id="contactToggle">Connect With Us</button>
+
+    <div class="contact" id="contactSection">
+        <h1>Let's Connect</h1>
+        <p>Welcome to makemeBLUSH! Connect with us to by helping us how we can improve.</p>
+        <div class="form">
+            <h1>Fill out the form to Connect with Us</h1>
+            <form>
+                <input type="text" placeholder="Enter Your First Name">
+                <input type="text" placeholder="Enter Your Last Name">
+                <input type="text" placeholder="Enter Your Email">
+                <input type="text" placeholder="Enter Your feedback">
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+    <div class="letter">
+        <div class="sign">
+            <h2 style="text-align: center;">Subscribe to Our Updates</h2>
+            <p style="text-align: center;">Be the first to know about our exclusive deals and new arrivals.</p>
+        </div>
+        <div class="inp" style="text-align: center;">
+            <input type="email" id="emailInput" placeholder="Enter your email address">
+            <button id="subscribeButton">Subscribe</button>
+            <p id="subscribeMessage" style="display: none; color: #32CD32; font-weight: bold; text-align: center; margin-top: 10px;">Thank you for subscribing! You are now part of our exclusive updates.</p>
+        </div>
+    </div>
+    
+    <script>
+        const subscribeButton = document.getElementById("subscribeButton");
+        const subscribeMessage = document.getElementById("subscribeMessage");
+        const emailInput = document.getElementById("emailInput");
+    
+        subscribeButton.addEventListener("click", function () {
+            if (emailInput.value && subscribeButton.innerText === "Subscribe") {
+                subscribeButton.innerText = "Subscribed";
+                subscribeButton.style.backgroundColor = "#32CD32"; // Change the button's background color
+                subscribeMessage.style.display = "block";
+            }
+        });
+    </script>
+    
+    
+
+<script>
+    function subscribe() {
+        const subscribeButton = document.getElementById("subscribeButton");
+        const subscribeMessage = document.getElementById("subscribeMessage");
+        const emailInput = document.getElementById("emailInput");
+
+        if (emailInput.value && subscribeButton.innerText === "Subscribe") {
+            subscribeButton.innerText = "Subscribed";
+            subscribeButton.style.backgroundColor = "#32CD32"; // Change the button's background color
+            subscribeMessage.style.display = "block";
+        }
+    }
+</script>
+          
+    <script>
+        // JavaScript to toggle the visibility of the Contact section
+        const contactToggle = document.getElementById("contactToggle");
+        const contactSection = document.getElementById("contactSection");
+
+        contactToggle.addEventListener("click", function() {
+            if (contactSection.style.display === "none" || contactSection.style.display === "") {
+                contactSection.style.display = "block";
+            } else {
+                contactSection.style.display = "none";
+            }
+        });
+    </script>
+</body>
+
+</html>
